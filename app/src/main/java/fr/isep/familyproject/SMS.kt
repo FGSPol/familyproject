@@ -116,38 +116,32 @@ class SMS : AppCompatActivity() {
     ) {
         when (requestCode) {
             MY_PERMISSIONS_REQUEST_READ_CONTACTS -> {
-                // Handle READ_CONTACTS permission result
                 handleReadContactsPermissionResult()
             }
             MY_PERMISSIONS_REQUEST_SEND_SMS -> {
-                // Handle SEND_SMS permission result
                 handleSendSmsPermissionResult()
             }
         }
     }
 
     private fun handleReadContactsPermissionResult() {
-        // Check if the permission is granted
         if (ContextCompat.checkSelfPermission(
                 this,
                 Manifest.permission.READ_CONTACTS
             ) == PackageManager.PERMISSION_GRANTED
         ) {
-            // READ_CONTACTS permission granted, check SEND_SMS permission
             val contactName = "Paul"
             if (ContextCompat.checkSelfPermission(
                     this,
                     Manifest.permission.SEND_SMS
                 ) != PackageManager.PERMISSION_GRANTED
             ) {
-                // Request the SEND_SMS permission
                 ActivityCompat.requestPermissions(
                     this,
                     arrayOf(Manifest.permission.SEND_SMS),
                     MY_PERMISSIONS_REQUEST_SEND_SMS
                 )
             } else {
-                // SEND_SMS permission also granted, proceed with sending SMS
                 val phoneNumber = getPhoneNumberForContact(contactName)
                 if (phoneNumber != null) {
                     val message = smsEditText.text.toString()
@@ -155,8 +149,6 @@ class SMS : AppCompatActivity() {
                 }
             }
         } else {
-            // READ_CONTACTS permission denied, handle accordingly
-            // For example, you can display a message to the user
             Toast.makeText(
                 this,
                 "Permission denied. Cannot access contacts.",
@@ -166,13 +158,11 @@ class SMS : AppCompatActivity() {
     }
 
     private fun handleSendSmsPermissionResult() {
-        // Check if the permission is granted
         if (ContextCompat.checkSelfPermission(
                 this,
                 Manifest.permission.SEND_SMS
             ) == PackageManager.PERMISSION_GRANTED
         ) {
-            // SEND_SMS permission granted, proceed with sending SMS
             val contactName = "Paul"
             val phoneNumber = getPhoneNumberForContact(contactName)
             if (phoneNumber != null) {
@@ -180,8 +170,6 @@ class SMS : AppCompatActivity() {
                 sendMessage(phoneNumber, message)
             }
         } else {
-            // SEND_SMS permission denied, handle accordingly
-            // For example, you can display a message to the user
             Toast.makeText(
                 this,
                 "Permission denied. Cannot send SMS.",

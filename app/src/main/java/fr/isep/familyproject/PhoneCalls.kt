@@ -1,4 +1,4 @@
-/*package fr.isep.familyproject
+package fr.isep.familyproject
 
 import android.content.Intent
 import android.net.Uri
@@ -14,8 +14,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.main_screen)
 
         // Find the Button using findViewById
-        //val btnCallDad: Button = findViewById(R.id.btnCallDad)
-        //val btnCallMom: Button = findViewById(R.id.btnCallMom)
+        val btnCallDad: Button = findViewById(R.id.btnCallDad)
+        val btnCallMom: Button = findViewById(R.id.btnCallMom)
 
         btnCallDad.setOnClickListener {
             val dialIntent = Intent(Intent.ACTION_DIAL)
@@ -33,4 +33,4 @@ class MainActivity : AppCompatActivity() {
             startActivity(dialIntent)
         }
     }
-}*/
+}
