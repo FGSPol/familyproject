@@ -22,5 +22,11 @@ class MainScreen : AppCompatActivity() {
             val intent = Intent(this, SMS::class.java);
             startActivity(intent);
         }
+
+        phone_button.setOnClickListener(){
+            val intent = Intent(this, PhoneCalls::class.java);
+            startActivity(intent);
+        }
+
     }
 }

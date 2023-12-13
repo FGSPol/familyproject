@@ -8,10 +8,10 @@ import android.webkit.WebView
 import android.widget.Button
 import fr.isep.familyproject.R
 
-class MainActivity : AppCompatActivity() {
+class PhoneCalls : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.main_screen)
+        setContentView(R.layout.phone_calls)
 
         // Find the Button using findViewById
         val btnCallDad: Button = findViewById(R.id.btnCallDad)

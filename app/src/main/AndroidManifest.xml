@@ -33,6 +33,12 @@
             android:exported="true">
             <!-- Add intent filter or other configuration if needed -->
         </activity>
+        <activity
+            android:name=".PhoneCalls"
+            android:exported="true">
+            <!-- Add intent filter or other configuration if needed -->
+        </activity>
+
 
 
     </application>
