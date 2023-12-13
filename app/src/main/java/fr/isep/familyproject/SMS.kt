@@ -6,7 +6,7 @@ import android.telephony.SmsManager
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-import fr.isep.myapplication.R
+import fr.isep.familyproject.R
 
 class SMS : AppCompatActivity() {
 
