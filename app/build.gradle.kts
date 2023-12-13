@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "fr.isep.myapplication"
+    namespace = "fr.isep.familyproject"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "fr.isep.myapplication"
+        applicationId = "fr.isep.familyproject"
         minSdk = 27
         targetSdk = 33
         versionCode = 1
